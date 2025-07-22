@@ -1,0 +1,464 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primario: #e0f0ff; /* Azul claro */
+  --color-secundario: #007bff; /* Azul fuerte */
+  --color-texto: #0a0a0a;
+  --color-fondo-footer: #cce6ff;
+}
+
+/* BODY GENERAL */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer siempre quede abajo*/
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+header {
+  background-color: rgb(98, 117, 193);
+  text-align: center;
+}
+
+h1 {
+  color: var(--color-primario);
+  font-size: 32px;
+}
+
+.titulos {
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: rgb(98, 117, 193);
+  text-align: center;
+}
+
+/* MENÚ */
+nav {
+  background-color: rgb(98, 117, 193);
+  padding: 10px;
+  text-align: center;
+  z-index: 1000; /* asegura que quede por encima de otros elementos */
+}
+
+.nav-menu {
+  width: 100%;
+}
+
+.nav-menu ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columnas de igual ancho */
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-menu li {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  font-size: 18px;
+  text-align: center; /* centrar texto en los enlaces */
+  width: 100%;
+  background-color: white;
+  color: rgb(98, 117, 193);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  background-color: var(--color-secundario);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive: para pantallas mayores a 768px (desktop) */
+@media screen and (max-width: 950px) {
+  .nav-menu ul {
+    grid-template-columns: repeat(2, auto); /* todos en una fila */
+  }
+  .nav-menu a {
+    text-align: center; /* centrar texto en los enlaces */
+    width: 100%; /* ocupar todo el ancho del contenedor */
+  }
+}
+
+/* CONTENIDO PRINCIPAL */
+section {
+  background-color: #d6ecff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGEN DE INICIO */
+#inicio img {
+  width: 30%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 20px auto;
+}
+
+#inicio p {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#preparacionFisica p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#preparacionFisica img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+#contacto p {
+  color: var(--color-texto);
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* BOTÓN DE ENVÍO */
+#enviarForm {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#enviarForm:hover {
+  background-color: #0056b3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.seccionFormulario {
+  background-color: #f0f8ff;
+}
+
+input {
+  height: 25px;
+  width: 100%;
+}
+
+input:required,
+select:required {
+  outline: none;
+  border: 2px solid red;
+}
+
+input:required:valid,
+select:required:valid {
+  border: 2px solid green;
+  background-color: white;
+}
+
+textarea {
+  height: 80px;
+  width: 100%;
+}
+
+select {
+  height: 30px;
+  width: 100%;
+}
+
+/* VIDEO CENTRADO */
+#preparacionFisica iframe {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER SIEMPRE ABAJO */
+footer,
+#footer {
+  background-color: var(--color-fondo-footer);
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 14px;
+  width: 100%;
+}
+
+/*NUTRICION*/
+
+.nutricion p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.nutricion h3 {
+  color: #007bff;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.nutricion ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.nutricion a {
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nutricion a:hover {
+  text-decoration: underline;
+}
+
+/* Espaciado entre secciones internas */
+.nutricion section {
+  margin-top: 30px;
+}
+
+#psicologia p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+h2 {
+  font-style: italic;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #007bff;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#rehabilitacion p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#rehabilitacion h4 {
+  color: #007bff;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#footer p {
+  font-weight: bold;
+  font-size: 15px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.contenedor-bloques {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* permite que los bloques se ajusten en varias líneas */
+  justify-content: center; /* centra los bloques en el eje horizontal */
+  align-items: center; /* centra los bloques en el eje vertical */
+  gap: 20px; /* espacio entre los bloques */
+  text-align: center; /* centra los bloques en el eje horizontal */
+  margin-top: 70px; /* espacio entre el contenedor y el resto del contenido */
+}
+
+.bloque {
+  display: inline-block;
+  width: 40%; /* un poco menos del 50% para dejar margen */
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 5px;
+  box-sizing: border-box;
+  vertical-align: top; /* importante para alinear bien las líneas */
+}
+
+.bloque h3 {
+  font-size: 20px !important;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bloque a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .bloque h3 {
+    font-size: 15px !important;
+    color: #333;
+    margin-bottom: 10px;
+  }
+}
+
+.caja {
+  width: 50%;
+  height: auto;
+  flex-wrap: wrap; /* permite que los bloques se ajusten en varias líneas */
+  background-color: aqua;
+  border: solid 2px blue;
+  text-align: center;
+  margin: 5px;
+}
+
+.nutricionSemanal {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid; /*DEFINIMOS GRID*/
+  grid-template-columns: repeat(4, 1fr); /*TRES COLUMNAS DE IGUAL ANCHO*/
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+/*.grid-item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  border-radius: 8px;
+}*/
+
+.grid-item1 {
+  grid-column: 1 / 3;
+  background-color: red;
+}
+
+.grid-item2 {
+  grid-row: 2 / 4;
+  background-color: blue;
+}
+
+.grid-item3 {
+  grid-area: 1 / 3 / 3 / 5;
+  background-color: green;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "nav aside"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.grid-header {
+  grid-area: header;
+  background-color: #ff9999; /* rojo claro */
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-nav {
+  grid-area: nav;
+  background-color: #99ccff; /* azul claro */
+  padding: 20px;
+}
+
+.grid-main {
+  grid-area: main;
+  background-color: #99ff99; /* verde claro */
+  padding: 20px;
+}
+
+.grid-aside {
+  grid-area: aside;
+  background-color: #ffff99; /* amarillo claro */
+  padding: 20px;
+}
+
+.grid-footer {
+  grid-area: footer;
+  background-color: #d9b3ff; /* violeta claro */
+  padding: 20px;
+  text-align: center;
+}
+
+.ejemplo {
+  height: 100dvh;
+  background-color: red;
+}
+
+@media (max-width: 1400px) {
+  .ejemplo {
+    background-color: blue; /* Cambia a 100vh en pantallas más pequeñas */
+  }
+}
+
+.container {
+  background-color: red;
+}
+
+.container-fluid {
+  background-color: green;
+}

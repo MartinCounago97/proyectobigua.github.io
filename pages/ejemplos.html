@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demostración de CSS: display y position</title>
+    <style>
+      /* Estilo general */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+
+      h2 {
+        margin-top: 40px;
+        color: #333;
+      }
+
+      .example-container {
+        margin-bottom: 40px;
+      }
+
+      .example-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      /* Ejemplos de display */
+      .block-example {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #d9f0fc;
+        border: 1px solid #00aaff;
+      }
+
+      .inline-example {
+        display: inline;
+        color: #ff5733;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      .inline-block-example {
+        display: inline-block;
+        width: 150px;
+        height: 100px;
+        background-color: #c5e1a5;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        border: 1px solid #7cb342;
+      }
+
+      /* Ejemplos de position */
+      .relative-example {
+        position: relative;
+        top: 20px;
+        left: 10px;
+        background-color: #ffcc80;
+        padding: 10px;
+      }
+
+      .absolute-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #e0e0e0;
+        margin-bottom: 20px;
+      }
+
+      .absolute-example {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: #ff8a80;
+        padding: 10px;
+      }
+
+      .fixed-example {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #b39ddb;
+        padding: 10px;
+        z-index: 1000;
+      }
+
+      .sticky-container {
+        height: 1000px;
+        background-color: #fff9c4;
+        padding: 10px;
+      }
+
+      .sticky-example {
+        position: sticky;
+        top: 10px;
+        background-color: #ffc107;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demostración de CSS: display y position</h1>
+
+    <h2>Propiedad display</h2>
+    <div class="example-container">
+      <div class="example-title">display: block</div>
+      <div class="block-example">Este es un elemento de bloque</div>
+    </div>
+
+    <div class="example-container">
+      <div class="example-title">display: inline</div>
+      <span class="inline-example">Elemento en línea 1</span>
+      <span class="inline-example">Elemento en línea 2</span>
+    </div>
+
+    <div class="example-container">
+      <div class="example-title">display: inline-block</div>
+      <div class="inline-block-example">Elemento 1</div>
+      <div class="inline-block-example">Elemento 2</div>
+    </div>
+
+    <h2>Propiedad position</h2>
+    <div class="example-container">
+      <div class="example-title">position: relative</div>
+      <div class="relative-example">Elemento relativo</div>
+    </div>
+
+    <div class="example-container">
+      <div class="example-title">position: absolute</div>
+      <div class="absolute-container">
+        <div class="absolute-example">Elemento absoluto</div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <div class="example-title">position: fixed</div>
+      <div class="fixed-example">Elemento fijo</div>
+    </div>
+
+    <div class="example-container sticky-container">
+      <div class="example-title">position: sticky</div>
+      <div class="sticky-example">Elemento sticky</div>
+      <p>
+        Desplázate hacia abajo para ver cómo el elemento sticky se comporta.
+      </p>
+    </div>
+  </body>
+</html>
