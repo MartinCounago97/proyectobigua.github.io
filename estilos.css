@@ -126,22 +126,36 @@ section {
   margin: 20px auto;
 }
 
-#inicio p {
-  font-weight: bold;
-  font-size: 22px;
-  text-align: center;
-}
-
-#preparacionFisica p {
-  font-weight: bold;
+p {
   font-size: 20px;
   text-align: center;
 }
 
-#preparacionFisica img {
+.galeria {
+  position: relative;
   width: 100%;
-  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
   border-radius: 20px;
+  aspect-ratio: 16 / 9;
+}
+
+.galeria img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+}
+
+.galeria img.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 #contacto p {
@@ -287,14 +301,6 @@ h3 {
   font-size: 22px;
   margin-bottom: 10px;
   text-transform: uppercase;
-}
-
-#rehabilitacion p {
-  font-weight: bold;
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 #rehabilitacion h4 {

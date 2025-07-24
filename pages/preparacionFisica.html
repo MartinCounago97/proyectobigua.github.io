@@ -14,9 +14,7 @@
         <nav class="nav-menu">
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li>
-              <a href="preparacionFisica.html">Preparación física</a>
-            </li>
+            <li><a href="preparacionFisica.html">Preparación física</a></li>
             <li><a href="rehabilitacion.html">Rehabilitación</a></li>
             <li><a href="nutricion.html">Nutrición</a></li>
             <li><a href="psicologia.html">Psicología</a></li>
@@ -26,21 +24,21 @@
         </nav>
       </div>
     </header>
+
     <section>
-      <h3>Método de entrenamiento</h3>
+      <h2>Método de entrenamiento</h2>
       <p>
         Realizamos planes de entrenamiento ajustados a tus objetivos personales
         y te acompañamos en tu proceso de mejora física. <br />
         Nuestro equipo de profesionales te guiará en cada paso, asegurando que
         alcances tus metas de manera segura y efectiva.
-        <br />
-        <br />
+        <br /><br />
       </p>
 
       <div class="galeria">
-        <img src="../img/gym.jpeg" />
-        <img src="../img/cintas.jpg" />
-        <img src="../img/profe.webp" />
+        <img src="../img/gym.jpeg" class="img-galeria" />
+        <img src="../img/cintas.jpg" class="img-galeria" />
+        <img src="../img/profe.webp" class="img-galeria" />
       </div>
     </section>
 
@@ -60,5 +58,19 @@
         <p>Dirección: Av. Italia 1234, Montevideo</p>
       </footer>
     </div>
+
+    <script>
+      const imagenes = document.querySelectorAll(".galeria img");
+      let index = 0;
+
+      function mostrarImagen() {
+        imagenes.forEach((img) => img.classList.remove("active"));
+        imagenes[index].classList.add("active");
+        index = (index + 1) % imagenes.length;
+      }
+
+      mostrarImagen();
+      setInterval(mostrarImagen, 3000);
+    </script>
   </body>
 </html>
