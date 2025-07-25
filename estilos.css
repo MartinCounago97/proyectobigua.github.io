@@ -224,11 +224,25 @@ select {
 }
 
 /* VIDEO CENTRADO */
-#preparacionFisica iframe {
-  display: block;
-  margin: 0 auto;
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
 }
 
 /* FOOTER SIEMPRE ABAJO */
@@ -348,11 +362,11 @@ h3 {
   }
 }
 
-.nutricionSemanal {
+.calendarioPersonalizado {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 10px;
+  padding: 70px;
   justify-content: flex-start;
   align-items: stretch; /* importante para que todas las cajas estiren igual en alto */
 }
@@ -362,22 +376,41 @@ h3 {
   flex: 1 1 150px;
   min-width: 120px;
   max-width: 200px;
-  height: 250px;
   background-color: #a8d5ba;
   border: 2px solid #3a6f41;
   border-radius: 8px;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 5px 0;
-
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   /* agregar para controlar el texto */
   overflow-wrap: break-word; /* rompe palabras largas */
   word-wrap: break-word; /* compatibilidad */
   hyphens: auto; /* guiones automáticos si el navegador lo soporta */
   overflow: hidden; /* corta cualquier overflow */
+}
+
+.caja h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.caja h3 {
+  font-size: 16px;
+  margin-bottom: 0px;
+  padding: 2px;
+  color: black;
+  text-align: center;
+}
+
+.caja p {
+  font-size: 18px;
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Pantallas medianas (tablet) - 3 columnas */
