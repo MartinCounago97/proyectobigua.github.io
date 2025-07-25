@@ -435,6 +435,49 @@ h3 {
   }
 }
 
+.contenedor-ejercicios {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bloque-ejercicio {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.caja-ejercicio {
+  width: 100%;
+  max-width: 100%;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caja-ejercicio h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.caja-ejercicio p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.caja-ejercicio ul {
+  padding-left: 20px;
+  color: #333;
+}
+
+.caja-ejercicio ul li {
+  margin-bottom: 6px;
+}
 .grid-container {
   display: grid; /*DEFINIMOS GRID*/
   grid-template-columns: repeat(4, 1fr); /*TRES COLUMNAS DE IGUAL ANCHO*/

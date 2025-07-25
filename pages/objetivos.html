@@ -3,75 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo Bootstrap</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="../estilos.css" />
+    <title>Objetivos</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Mi Sitio</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Inicio <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
+    <header>
+      <h1 class="titulos">Centro integral R3 - Objetivos del plan</h1>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="preparacionFisica.html">Preparación física</a></li>
+          <li><a href="rehabilitacion.html">Rehabilitación</a></li>
+          <li><a href="nutricion.html">Nutrición</a></li>
+          <li><a href="psicologia.html">Psicología</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="miEspacio.html">Mi espacio</a></li>
         </ul>
-      </div>
-    </nav>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-8">
-          <h1>Bienvenidos a Mi Sitio</h1>
+      </nav>
+    </header>
+
+    <main class="contenedor-ejercicios">
+      <section class="bloque-ejercicio">
+        <div class="caja-ejercicio">
+          <h2>Rendimiento físico</h2>
           <p>
-            Este es un ejemplo de una página web responsiva creada con
-            Bootstrap.
+            Mejorar la resistencia cardiovascular, la fuerza muscular y la
+            movilidad general a través de rutinas personalizadas.
           </p>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tarjeta de Ejemplo</h5>
-              <p class="card-text">
-                Este es un ejemplo de una tarjeta Bootstrap. Puedes usar
-                tarjetas para mostrar contenido de manera organizada.
-              </p>
-              <a href="#" class="btn btn-primary">Más Información</a>
-            </div>
-          </div>
+        <div class="caja-ejercicio">
+          <h2>Salud integral</h2>
+          <p>
+            Promover hábitos saludables en alimentación, sueño y recuperación
+            que impacten positivamente en el bienestar físico y mental.
+          </p>
         </div>
-      </div>
-    </div>
-    <br />
-    <div class="container">CONTAINER<!-- Contenido aquí --></div>
+        <div class="caja-ejercicio">
+          <h2>Prevención y cuidado</h2>
+          <p>
+            Minimizar el riesgo de lesiones y potenciar una recuperación
+            efectiva con planes adaptados a cada necesidad.
+          </p>
+        </div>
+      </section>
+    </main>
 
-    <div class="container-fluid">CONTAINER FLUID<!-- Contenido aquí --></div>
-    <!-- Enlace a los scripts de Bootstrap -->
-    <script src="<https://code.jquery.com/jquery-3.5.1.slim.min.js>"></script>
-    <script src="<https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js>"></script>
-    <script src="<https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js>"></script>
+    <div id="footer">
+      <footer>
+        <hr />
+        <p>&copy; 2025 Centro Integral R3. Todos los derechos reservados.</p>
+        <p>Dirección: Av. Italia 1234, Montevideo</p>
+      </footer>
+    </div>
   </body>
 </html>
