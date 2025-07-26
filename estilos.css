@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +5,8 @@
 }
 
 :root {
-  --color-primario: #e0f0ff; /* Azul claro */
-  --color-secundario: #007bff; /* Azul fuerte */
+  --color-primario: #e0f0ff;
+  --color-secundario: #007bff;
   --color-texto: #0a0a0a;
   --color-fondo-footer: #cce6ff;
 }
@@ -25,7 +24,6 @@ body {
   flex-direction: column;
 }
 
-/* Footer siempre quede abajo*/
 main {
   flex: 1;
   display: flex;
@@ -33,7 +31,6 @@ main {
   align-items: center;
 }
 
-/* HEADER */
 header {
   background-color: rgb(98, 117, 193);
   text-align: center;
@@ -51,12 +48,11 @@ h1 {
   text-align: center;
 }
 
-/* MENÚ */
 nav {
   background-color: rgb(98, 117, 193);
   padding: 10px;
   text-align: center;
-  z-index: 1000; /* asegura que quede por encima de otros elementos */
+  z-index: 1000;
 }
 
 .nav-menu {
@@ -65,7 +61,7 @@ nav {
 
 .nav-menu ul {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 8 columnas de igual ancho */
+  grid-template-columns: repeat(7, 1fr);
   gap: 15px;
   list-style: none;
 }
@@ -81,7 +77,7 @@ nav {
   align-items: center;
   padding: 2px 4px;
   font-size: 18px;
-  text-align: center; /* centrar texto en los enlaces */
+  text-align: center;
   width: 100%;
   background-color: white;
   color: rgb(98, 117, 193);
@@ -96,18 +92,16 @@ nav {
   transition: background-color 0.3s ease;
 }
 
-/* Responsive: para pantallas mayores a 768px (desktop) */
 @media screen and (max-width: 950px) {
   .nav-menu ul {
-    grid-template-columns: repeat(2, auto); /* todos en una fila */
+    grid-template-columns: repeat(2, auto);
   }
   .nav-menu a {
-    text-align: center; /* centrar texto en los enlaces */
-    width: 100%; /* ocupar todo el ancho del contenedor */
+    text-align: center;
+    width: 100%;
   }
 }
 
-/* CONTENIDO PRINCIPAL */
 section {
   background-color: #d6ecff;
   border-radius: 20px;
@@ -121,7 +115,6 @@ section {
   align-items: center;
 }
 
-/* IMAGEN DE INICIO */
 #inicio img {
   width: 30%;
   height: auto;
@@ -130,9 +123,36 @@ section {
   margin: 20px auto;
 }
 
+.destacados h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.destacados p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
 p {
   font-size: 20px;
   text-align: center;
+}
+
+.testimonios .autor {
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 10px 0;
+}
+
+.testimonios p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .galeria {
@@ -169,7 +189,6 @@ p {
   text-align: center;
 }
 
-/* BOTÓN DE ENVÍO */
 #enviarForm {
   background-color: var(--color-secundario);
   color: white;
@@ -223,12 +242,10 @@ select {
   width: 100%;
 }
 
-/* VIDEO CENTRADO */
-
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -245,7 +262,6 @@ select {
   border-radius: 12px;
 }
 
-/* FOOTER SIEMPRE ABAJO */
 #footer,
 footer {
   background-color: var(--color-fondo-footer, #eee);
@@ -255,8 +271,6 @@ footer {
   width: 100%;
   margin-top: auto;
 }
-
-/*NUTRICION*/
 
 .nutricion h3 {
   color: #007bff;
@@ -289,7 +303,6 @@ ul li {
   text-decoration: underline;
 }
 
-/* Espaciado entre secciones internas */
 .nutricion section {
   margin-top: 30px;
 }
@@ -324,12 +337,12 @@ h3 {
 .contenedor-bloques {
   padding: 20px;
   display: flex;
-  flex-wrap: wrap; /* permite que los bloques se ajusten en varias líneas */
-  justify-content: center; /* centra los bloques en el eje horizontal */
-  align-items: center; /* centra los bloques en el eje vertical */
-  gap: 20px; /* espacio entre los bloques */
-  text-align: center; /* centra los bloques en el eje horizontal */
-  margin-top: 70px; /* espacio entre el contenedor y el resto del contenido */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 70px;
 }
 
 .bloque {
@@ -369,7 +382,6 @@ h3 {
   text-decoration: underline;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .bloque {
     width: 80%;
@@ -391,11 +403,10 @@ h3 {
   gap: 10px;
   padding: 70px;
   justify-content: flex-start;
-  align-items: stretch; /* importante para que todas las cajas estiren igual en alto */
+  align-items: stretch;
 }
 
 .caja {
-  /* lo que ya tenés */
   flex: 1 1 150px;
   min-width: 120px;
   max-width: 200px;
@@ -409,11 +420,10 @@ h3 {
   text-align: center;
   margin: 5px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* agregar para controlar el texto */
-  overflow-wrap: break-word; /* rompe palabras largas */
-  word-wrap: break-word; /* compatibilidad */
-  hyphens: auto; /* guiones automáticos si el navegador lo soporta */
-  overflow: hidden; /* corta cualquier overflow */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow: hidden;
 }
 
 .caja h2 {
@@ -436,22 +446,20 @@ h3 {
   text-align: center;
 }
 
-/* Pantallas medianas (tablet) - 3 columnas */
 @media (max-width: 900px) and (min-width: 601px) {
   .caja {
-    flex: 1 1 30%; /* 3 cajas por fila aprox */
+    flex: 1 1 30%;
     max-width: none;
     min-width: auto;
   }
 }
 
-/* Pantallas chicas (móvil) - 2 columnas */
 @media (max-width: 600px) {
   .nutricionSemanal {
     justify-content: center;
   }
   .caja {
-    flex: 1 1 45%; /* 2 cajas por fila aprox */
+    flex: 1 1 45%;
     max-width: none;
     min-width: auto;
     margin: 10px 5px;
@@ -501,9 +509,10 @@ h3 {
 .caja-ejercicio ul li {
   margin-bottom: 6px;
 }
+
 .grid-container {
-  display: grid; /*DEFINIMOS GRID*/
-  grid-template-columns: repeat(4, 1fr); /*TRES COLUMNAS DE IGUAL ANCHO*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 100px);
   gap: 10px;
 }
@@ -540,32 +549,32 @@ h3 {
 
 .grid-header {
   grid-area: header;
-  background-color: #ff9999; /* rojo claro */
+  background-color: #ff9999;
   padding: 20px;
   text-align: center;
 }
 
 .grid-nav {
   grid-area: nav;
-  background-color: #99ccff; /* azul claro */
+  background-color: #99ccff;
   padding: 20px;
 }
 
 .grid-main {
   grid-area: main;
-  background-color: #99ff99; /* verde claro */
+  background-color: #99ff99;
   padding: 20px;
 }
 
 .grid-aside {
   grid-area: aside;
-  background-color: #ffff99; /* amarillo claro */
+  background-color: #ffff99;
   padding: 20px;
 }
 
 .grid-footer {
   grid-area: footer;
-  background-color: #d9b3ff; /* violeta claro */
+  background-color: #d9b3ff;
   padding: 20px;
   text-align: center;
 }
@@ -577,7 +586,7 @@ h3 {
 
 @media (max-width: 1400px) {
   .ejemplo {
-    background-color: blue; /* Cambia a 100vh en pantallas más pequeñas */
+    background-color: blue;
   }
 }
 
