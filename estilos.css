@@ -263,6 +263,7 @@ footer {
   font-size: 22px;
   margin-bottom: 10px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .nutricion ul {
@@ -333,32 +334,54 @@ h3 {
 
 .bloque {
   display: inline-block;
-  width: 40%; /* un poco menos del 50% para dejar margen */
+  width: 40%;
   margin: 1rem;
   padding: 1rem;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
-  font-size: 5px;
   box-sizing: border-box;
-  vertical-align: top; /* importante para alinear bien las líneas */
+  vertical-align: top;
+  text-align: center;
+  border-radius: 12x;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .bloque h3 {
-  font-size: 20px !important;
-  color: #333;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .bloque a {
-  text-decoration: none;
+  display: inline-block;
+  width: 100%;
   color: #303030;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
+.bloque a:hover {
+  color: var(--color-secundario);
+  text-decoration: underline;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
+  .bloque {
+    width: 80%;
+    margin: 10px auto;
+  }
+
   .bloque h3 {
-    font-size: 15px !important;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .bloque a {
+    font-size: 16px;
   }
 }
 
