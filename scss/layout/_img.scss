@@ -1,9 +1,46 @@
+@mixin estilo-imagen(
+  $width,
+  $height,
+  $border-radius,
+  $display,
+  $margin,
+  $position,
+  $top,
+  $left,
+  $object-fit,
+  $opacity,
+  $transition,
+  $z-index
+) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  display: $display;
+  margin: $margin;
+  position: $position;
+  top: $top;
+  left: $left;
+  object-fit: $object-fit;
+  opacity: $opacity;
+  transition: $transition;
+  z-index: $z-index;
+}
+
 #inicio img {
-  width: 30%;
-  height: auto;
-  border-radius: 20px;
-  display: block;
-  margin: 20px auto;
+  @include estilo-imagen(
+    30%,
+    auto,
+    20px,
+    block,
+    20px auto,
+    static,
+    auto,
+    auto,
+    auto,
+    1,
+    null,
+    auto
+  );
 }
 
 .galeria {
@@ -17,15 +54,20 @@
 }
 
 .galeria img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  border-radius: 20px;
+  @include estilo-imagen(
+    100%,
+    100%,
+    20px,
+    static,
+    0,
+    absolute,
+    0,
+    0,
+    cover,
+    0,
+    opacity 1s ease-in-out,
+    0
+  );
 }
 
 .galeria img.active {
