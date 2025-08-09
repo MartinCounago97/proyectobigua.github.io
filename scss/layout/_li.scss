@@ -1,0 +1,9 @@
+.nutricion a {
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nutricion a:hover {
+  text-decoration: underline;
+}
