@@ -59,6 +59,201 @@ nav {
   transition: background-color 0.3s ease;
 }
 
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+#contacto p {
+  color: var(--color-texto);
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#footer p {
+  font-weight: bold;
+  font-size: 15px;
+  color: #555;
+  margin-top: 10px;
+}
+
+section {
+  background-color: #d6ecff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  align-items: center;
+}
+
+h2 {
+  font-size: 24px;
+  color: inherit;
+  text-transform: none;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 22px;
+  color: #007bff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.destacados h2 {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.destacados p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.testimonios .autor {
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 10px 0;
+}
+.testimonios p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.nutricion section {
+  margin-top: 30px;
+}
+
+.contenedor-bloques {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.bloque {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: inline-block;
+  width: 40%;
+  margin: 1rem;
+  vertical-align: top;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.bloque h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.bloque a {
+  display: inline-block;
+  width: 100%;
+  color: #303030;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.bloque a:hover {
+  color: var(--color-secundario);
+  text-decoration: underline;
+}
+
+.calendarioPersonalizado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 70px;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.caja {
+  background-color: #a8d5ba;
+  border: 1px solid #3a6f41;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1 1 150px;
+  min-width: 120px;
+  max-width: 200px;
+  margin: 5px 0;
+}
+.caja h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.caja p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.contenedor-ejercicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bloque-ejercicio {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.caja-ejercicio {
+  background-color: #fff5e1;
+  border: 1px solid #d4a017;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1 1 300px;
+  margin: 5px 0;
+}
+.caja-ejercicio h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.caja-ejercicio p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
 :root {
   --color-primario: #e0f0ff;
   --color-secundario: #007bff;

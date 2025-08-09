@@ -1,0 +1,196 @@
+$color-fondo: #d6ecff;
+$color-borde: #ccc;
+$color-primario: #007bff;
+$color-texto: #303030;
+$color-secundario: var(--color-secundario);
+$color-calendario: #a8d5ba;
+$color-calendario-borde: #3a6f41;
+$color-ejercicio: #fff5e1;
+$color-ejercicio-borde: #d4a017;
+
+$radius: 20px;
+$sombra: 0 4px 12px rgba(0, 0, 0, 0.05);
+$sombra-caja: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+@mixin caja-base($bg, $border, $radius, $padding, $shadow) {
+  background-color: $bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: $padding;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin titulo($size, $color: inherit, $transform: none, $italic: false) {
+  font-size: $size;
+  color: $color;
+  text-transform: $transform;
+  @if $italic {
+    font-style: italic;
+  }
+}
+
+section {
+  @include caja-base($color-fondo, transparent, $radius, 30px, $sombra);
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  align-items: center;
+}
+
+h2 {
+  @include titulo(24px, inherit, none, true);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h3 {
+  @include titulo(22px, $color-primario, uppercase);
+  margin-bottom: 10px;
+}
+
+.destacados {
+  h2 {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+.testimonios {
+  .autor {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 10px 0;
+  }
+  p {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+.nutricion section {
+  margin-top: 30px;
+}
+
+.contenedor-bloques {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.bloque {
+  @include caja-base(#f0f0f0, $color-borde, 12px, 1rem, $sombra-caja);
+  display: inline-block;
+  width: 40%;
+  margin: 1rem;
+  vertical-align: top;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    color: $color-texto;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-secundario;
+      text-decoration: underline;
+    }
+  }
+}
+
+.calendarioPersonalizado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 70px;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.caja {
+  @include caja-base(
+    $color-calendario,
+    $color-calendario-borde,
+    8px,
+    20px,
+    $sombra-caja
+  );
+  flex: 1 1 150px;
+  min-width: 120px;
+  max-width: 200px;
+  margin: 5px 0;
+
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+}
+
+.contenedor-ejercicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bloque-ejercicio {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.caja-ejercicio {
+  @include caja-base(
+    $color-ejercicio,
+    $color-ejercicio-borde,
+    8px,
+    20px,
+    $sombra-caja
+  );
+  flex: 1 1 300px;
+  margin: 5px 0;
+
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+}
