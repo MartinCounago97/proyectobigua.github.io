@@ -5,8 +5,8 @@ $color-texto: #303030;
 $color-secundario: var(--color-secundario);
 $color-calendario: #a8d5ba;
 $color-calendario-borde: #3a6f41;
-$color-ejercicio: #fff5e1;
-$color-ejercicio-borde: #d4a017;
+$color-ejercicio: #f0f8ff;
+$color-ejercicio-borde: #f0f8ff;
 
 $radius: 20px;
 $sombra: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -49,6 +49,11 @@ h2 {
 
 h3 {
   @include titulo(22px, $color-primario, uppercase);
+  margin-bottom: 10px;
+}
+
+h4 {
+  @include titulo(20px, $color-primario, uppercase);
   margin-bottom: 10px;
 }
 
@@ -160,13 +165,6 @@ h3 {
   }
 }
 
-.contenedor-ejercicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
 .bloque-ejercicio {
   display: flex;
   flex-direction: column;
@@ -177,20 +175,40 @@ h3 {
   @include caja-base(
     $color-ejercicio,
     $color-ejercicio-borde,
-    8px,
+    10px,
     20px,
-    $sombra-caja
+    0 2px 8px rgba(0, 0, 0, 0.1)
   );
-  flex: 1 1 300px;
-  margin: 5px 0;
+  width: 100%;
+  max-width: 100%;
 
-  h3 {
-    font-size: 1.2em;
+  h2 {
+    color: #2c3e50;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   p {
-    font-size: 0.9em;
-    margin: 5px 0;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: left;
   }
+
+  ul {
+    padding-left: 20px;
+    color: #333;
+    text-align: left;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+  }
+}
+
+.contenedor-ejercicios {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }

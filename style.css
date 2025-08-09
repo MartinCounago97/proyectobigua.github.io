@@ -11,6 +11,13 @@ main {
   align-items: center;
 }
 
+.contenedor-ejercicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 html {
   height: 100%;
   margin: 0;
@@ -85,6 +92,13 @@ select {
 
 .seccionFormulario {
   background-color: #f0f8ff;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
 }
 
 h1 {
@@ -234,6 +248,13 @@ h3 {
   margin-bottom: 10px;
 }
 
+h4 {
+  font-size: 20px;
+  color: #007bff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
 .destacados h2 {
   font-size: 20px;
   text-align: left;
@@ -343,13 +364,6 @@ h3 {
   margin: 5px 0;
 }
 
-.contenedor-ejercicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
 .bloque-ejercicio {
   display: flex;
   flex-direction: column;
@@ -357,25 +371,43 @@ h3 {
 }
 
 .caja-ejercicio {
-  background-color: #fff5e1;
-  border: 1px solid #d4a017;
-  border-radius: 8px;
+  background-color: #f0f8ff;
+  border: 1px solid #f0f8ff;
+  border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   text-align: center;
-  flex: 1 1 300px;
-  margin: 5px 0;
+  width: 100%;
+  max-width: 100%;
 }
-.caja-ejercicio h3 {
-  font-size: 1.2em;
+.caja-ejercicio h2 {
+  color: #2c3e50;
   margin-bottom: 10px;
+  text-align: center;
 }
 .caja-ejercicio p {
-  font-size: 0.9em;
-  margin: 5px 0;
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.caja-ejercicio ul {
+  padding-left: 20px;
+  color: #333;
+  text-align: left;
+}
+.caja-ejercicio ul li {
+  margin-bottom: 6px;
+}
+
+.contenedor-ejercicios {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 :root {
