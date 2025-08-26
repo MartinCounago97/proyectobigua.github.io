@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +65,7 @@ form {
 }
 
 input {
-  height: 25px;
+  height: 40px;
   width: 100%;
 }
 
@@ -116,6 +117,27 @@ h1 {
 header {
   background-color: rgb(98, 117, 193);
   text-align: center;
+  position: relative; /* para posicionar el botón dentro */
+  padding: 15px;
+}
+
+/* Botón logout */
+.logout-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: white;
+  color: rgb(98, 117, 193);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: var(--color-secundario);
+  color: white;
 }
 
 #inicio img {
