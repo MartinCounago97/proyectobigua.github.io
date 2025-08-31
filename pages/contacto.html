@@ -25,6 +25,13 @@
   <body id="contacto">
     <header>
       <h1 class="titulos">Centro integral R3 - Contacto</h1>
+      <button
+        class="logout-arrow"
+        onclick="location.href='../index.html'"
+        title="Salir"
+      >
+        ➜
+      </button>
       <div id="menu">
         <nav class="nav-menu">
           <ul>
@@ -108,47 +115,6 @@
 
         form.reset();
       });
-    </script>
-
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="preparacionFisica.html">Preparación física</a></li>
-        <li><a href="rehabilitacion.html">Rehabilitación</a></li>
-        <li><a href="nutricion.html">Nutrición</a></li>
-        <li><a href="psicologia.html">Psicología</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="miEspacio.html">Mi espacio</a></li>
-      </ul>
-    </nav>
-
-    <script>
-      const navUl = document.querySelector(".nav-menu ul");
-
-      function checkWidth() {
-        const existingLi = document.getElementById("salir-li");
-
-        if (window.innerWidth <= 948) {
-          // Si no existe, lo agregamos
-          if (!existingLi) {
-            const extraLi = document.createElement("li");
-            extraLi.id = "salir-li"; // le damos un id para identificarlo
-            const link = document.createElement("a");
-            link.href = "../index.html";
-            link.textContent = "Salir";
-            extraLi.appendChild(link);
-            navUl.appendChild(extraLi);
-          }
-        } else {
-          // Si existe y la ventana es mayor a 948, lo eliminamos
-          if (existingLi) {
-            navUl.removeChild(existingLi);
-          }
-        }
-      }
-
-      window.addEventListener("resize", checkWidth);
-      window.addEventListener("load", checkWidth);
     </script>
   </body>
 </html>

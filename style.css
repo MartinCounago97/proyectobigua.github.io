@@ -47,6 +47,30 @@ body {
   background-color: #6bb2ff;
 }
 
+.logout-arrow {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(98, 117, 193);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  position: fixed;
+}
+
+.logout-arrow:hover {
+  background-color: rgb(80, 100, 170);
+}
+
 #footer,
 footer {
   background-color: var(--color-fondo-footer, #eee);
