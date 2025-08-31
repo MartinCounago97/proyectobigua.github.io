@@ -18,9 +18,7 @@
   <body id="miEspacio">
     <header>
       <h1 class="titulos">Centro integral R3 - Rutinas</h1>
-      <button class="logout-btn" onclick="location.href='../index.html'">
-        Salir
-      </button>
+
       <div id="menu">
         <nav class="nav-menu">
           <ul>
@@ -64,4 +62,32 @@
       </footer>
     </div>
   </body>
+  <script>
+    const navUl = document.querySelector(".nav-menu ul");
+
+    function checkWidth() {
+      const existingLi = document.getElementById("salir-li");
+
+      if (window.innerWidth <= 948) {
+        // Si no existe, lo agregamos
+        if (!existingLi) {
+          const extraLi = document.createElement("li");
+          extraLi.id = "salir-li"; // le damos un id para identificarlo
+          const link = document.createElement("a");
+          link.href = "../index.html";
+          link.textContent = "Salir";
+          extraLi.appendChild(link);
+          navUl.appendChild(extraLi);
+        }
+      } else {
+        // Si existe y la ventana es mayor a 948, lo eliminamos
+        if (existingLi) {
+          navUl.removeChild(existingLi);
+        }
+      }
+    }
+
+    window.addEventListener("resize", checkWidth);
+    window.addEventListener("load", checkWidth);
+  </script>
 </html>
